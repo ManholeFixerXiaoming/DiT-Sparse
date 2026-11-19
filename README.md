@@ -53,6 +53,13 @@ The test event is the 300-year design storm `r300y_p0.8_d3h` (peak factor 0.8, 3
 - Shenzhen dataset: UrbanFlood24 from U-RNN. Please comply with its license when reusing the data.
 - More code and related information will be released after the review is completed.
 
+## Access note
+
+Some networks restrict GitHub's image hosting (`raw.githubusercontent.com`). If the animations above do not load, open them directly:
+
+- [tjyz / wjl](https://ghfast.top/https://raw.githubusercontent.com/ManholeFixerXiaoming/DiT-Sparse/main/tjyz_wjl_demo/tjyz_wjl.gif)
+- [Site 1](https://ghfast.top/https://raw.githubusercontent.com/ManholeFixerXiaoming/DiT-Sparse/main/shenzhen_gf_dense/site1_gf_dense.gif) · [Site 2](https://ghfast.top/https://raw.githubusercontent.com/ManholeFixerXiaoming/DiT-Sparse/main/shenzhen_gf_dense/site2_gf_dense.gif) · [Site 3](https://ghfast.top/https://raw.githubusercontent.com/ManholeFixerXiaoming/DiT-Sparse/main/shenzhen_gf_dense/site3_gf_dense.gif)
+
 ## License
 
 The images and text in this repository are licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (see [LICENSE](LICENSE)) and are intended for non-commercial research and study only. You may copy, share and adapt the material with attribution for non-commercial purposes; commercial use is not permitted without permission.

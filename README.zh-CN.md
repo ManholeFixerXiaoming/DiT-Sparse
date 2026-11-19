@@ -53,6 +53,13 @@
 - 深圳市数据集：U-RNN 的 UrbanFlood24，使用数据时请遵循其许可要求。
 - 更多代码及相关信息将在审核结束后发布。
 
+## 访问说明
+
+部分网络对 GitHub 图床（`raw.githubusercontent.com`）访问受限，若上方动画无法显示，可直接打开：
+
+- [tjyz / wjl](https://ghfast.top/https://raw.githubusercontent.com/ManholeFixerXiaoming/DiT-Sparse/main/tjyz_wjl_demo/tjyz_wjl.gif)
+- [Site 1](https://ghfast.top/https://raw.githubusercontent.com/ManholeFixerXiaoming/DiT-Sparse/main/shenzhen_gf_dense/site1_gf_dense.gif)、[Site 2](https://ghfast.top/https://raw.githubusercontent.com/ManholeFixerXiaoming/DiT-Sparse/main/shenzhen_gf_dense/site2_gf_dense.gif)、[Site 3](https://ghfast.top/https://raw.githubusercontent.com/ManholeFixerXiaoming/DiT-Sparse/main/shenzhen_gf_dense/site3_gf_dense.gif)
+
 ## 许可
 
 本仓库的图片与文档采用 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 许可（全文见 [LICENSE](LICENSE)），仅限非商业的学习与研究用途：在署名且非商业的前提下，可复制、传播与改编；未经许可不得用于商业用途。
