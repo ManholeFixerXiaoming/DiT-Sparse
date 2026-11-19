@@ -2,42 +2,40 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-Animated forecasts from the **DiT-Sparse** project for urban flood inundation (2-D hydrodynamic modelling). This repository currently hosts **GIF animations only** — the code is still being cleaned up and reviewed, and is not open-sourced yet.
+This repository presents animated forecasting results from the DiT-Sparse project for urban flood inundation. At this stage it provides GIF animations only; the code is still being prepared and reviewed.
 
-Every animation shows **Prediction (left) vs. Observation (right)** from the hydrodynamic solver. Colours indicate water depth in metres; areas outside the computational mask are left white.
+Each animation compares the model prediction (left) with the hydrodynamic simulation (right). Colours indicate water depth in metres, and areas outside the computational domain are shown in white.
 
-## Datasets at a glance
-
-The animations come from two datasets:
+## Datasets
 
 | Dataset | Regions | Model | Test event | Duration |
 | --- | --- | --- | --- | --- |
-| Paper dataset | tjyz, wjl | CA-Sparse (epoch 200) | 526wd | 120 min |
-| Shenzhen dataset (U-RNN / UrbanFlood24) | Sites 1–3 | GF-Dense (240-min window) | r300y_p0.8_d3h | 360 min |
+| Paper dataset | tjyz, wjl | CA-Sparse | 526wd | 120 min |
+| Shenzhen dataset (U-RNN / UrbanFlood24) | Sites 1–3 | GF-Dense | r300y_p0.8_d3h | 360 min |
 
 ## 1. Paper dataset — tjyz and wjl
 
 ![tjyz / wjl](tjyz_wjl_demo/tjyz_wjl.gif)
 
-The same rainfall event (526wd, 120 min) over two regions: top row tjyz, bottom row wjl.
+Both regions share the same 120-min rainfall event (526wd); the upper row shows tjyz and the lower row shows wjl.
 
-| Region | MAE inside mask (m) |
+| Region | MAE within mask (m) |
 | --- | --- |
 | tjyz | 0.0062 |
 | wjl | 0.0115 |
 
-- Water-depth classes: 0 / 0.15 / 0.3 / 0.5 / 1 / 3 / 5 m (depths above 5 m are clipped to 5 m).
-- 120 frames, 80 ms per frame, looping.
+- Depth classes: 0 / 0.15 / 0.3 / 0.5 / 1 / 3 / 5 m (depths above 5 m are capped at 5 m).
+- 120 frames at 80 ms per frame.
 
 ## 2. Shenzhen dataset — data from U-RNN
 
-The Shenzhen cases come from the **UrbanFlood24** dataset released with [U-RNN](https://github.com/holmescao/U-RNN), covering three sites (location1–3).
+The Shenzhen cases are drawn from the UrbanFlood24 dataset released with [U-RNN](https://github.com/holmescao/U-RNN), covering three sites (location1–3).
 
-GF-Dense is trained from scratch for 200 epochs on each site with a 240-min rainfall window (159 min history + 1 min current + 80 min future), and the epoch-200 weights are used here. The test event is the 300-year design storm `r300y_p0.8_d3h` (peak factor 0.8, 3-hour hyetograph), 360 min in total, with rainfall concentrated in the first 180 min.
+The test event is the 300-year design storm `r300y_p0.8_d3h` (peak factor 0.8, 3-hour hyetograph), with a total duration of 360 min; rainfall is concentrated in the first 180 min.
 
 ![Site 1](shenzhen_gf_dense/site1_gf_dense.gif)
 
-| Site | MAE inside mask (m) | Peak prediction / observation (m) |
+| Site | MAE within mask (m) | Peak prediction / observation (m) |
 | --- | --- | --- |
 | Site 1 | 0.0044 | 2.16 / 2.16 |
 | Site 2 | 0.0035 | 2.98 / 2.96 |
@@ -47,17 +45,16 @@ GF-Dense is trained from scratch for 200 epochs on each site with a 240-min rain
 
 ![Site 3](shenzhen_gf_dense/site3_gf_dense.gif)
 
-- Water-depth classes: 0 / 0.05 / 0.1 / 0.2 / 0.4 / 0.8 / 1.6 / 3.2 m.
-- One frame every 3 min, 121 frames, 70 ms per frame, looping.
+- Depth classes: 0 / 0.05 / 0.1 / 0.2 / 0.4 / 0.8 / 1.6 / 3.2 m.
+- One frame every 3 min (121 frames at 70 ms per frame).
 
-## Data and code availability
+## Data and code
 
-- Shenzhen dataset: UrbanFlood24 from [U-RNN](https://github.com/holmescao/U-RNN); please follow its license when reusing the data.
-- Paper dataset, model weights, and the inference/rendering scripts are still under review and are not public yet.
-- The GIFs in this repository were rendered with Pillow, stitching prediction and observation frames together.
+- Shenzhen dataset: UrbanFlood24 from U-RNN. Please comply with its license when reusing the data.
+- More code and related information will be released after the review is completed.
 
 ## License
 
-The images and text in this repository are released for **non-commercial research and study only**, under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (full text in [LICENSE](LICENSE)). You may copy, share and adapt them with attribution for non-commercial purposes; **commercial use is not permitted without permission**.
+The images and text in this repository are licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (see [LICENSE](LICENSE)) and are intended for non-commercial research and study only. You may copy, share and adapt the material with attribution for non-commercial purposes; commercial use is not permitted without permission.
 
-For commercial licensing or collaboration, please contact **qimingcheng@foxmail.com**.
+For commercial licensing and collaboration, please contact **qimingcheng@foxmail.com**.
