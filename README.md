@@ -6,6 +6,8 @@ This repository presents animated forecasting results from the DiT-Sparse projec
 
 Each animation compares the model prediction (left) with the hydrodynamic simulation (right). Colours indicate water depth in metres, and areas outside the computational domain are shown in white.
 
+The light-blue region in each figure marks the mask of the computational domain. Outside this mask no inundation occurs even under extreme rainfall, so those cells are omitted in the sparse computation.
+
 ## Datasets
 
 | Dataset | Regions | Model | Test event | Duration |
